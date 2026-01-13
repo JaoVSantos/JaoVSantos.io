@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="lib/icons/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/animate/animate.css">
+  <link rel="stylesheet" href="lib/owlcarousel/owl.carousel.min.css">
+
+  <link class="color-mode" rel="stylesheet" href="css/styles.css">
+  <link class="color-change" rel="stylesheet" href="css/blue.css">
+
+  <script src="https://kit.fontawesome.com/bbe98df1ca.js" crossorigin="anonymous"></script>
+
+  <title>Currículo - João Vitor Santos</title>
+
+  <!-- EXTRA (só pra deixar bonito e alinhado) -->
+  <style>
+    /* ajuda o conteúdo ficar alinhado com sua topbar */
+    .right-resume .container-fruit { padding-top: 10px; }
+    .title-page p { margin-top: 8px; }
+
+    /* cards mais “premium” sem quebrar o template */
+    .section-box{
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 18px;
+      background: rgba(255,255,255,.05);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 22px 22px;
+    }
+
+    /* perfil/contatos em grid bem alinhado */
+    .cv-grid{
+      display: grid;
+      grid-template-columns: 1.6fr .9fr;
+      gap: 18px;
+      margin-top: 14px;
+    }
+    @media (max-width: 992px){
+      .cv-grid{ grid-template-columns: 1fr; }
+    }
+
+    .cv-meta{
+      margin: 0;
+      opacity: .88;
+      line-height: 1.6;
+    }
+    .cv-meta a{
+      font-weight: 800;
+      text-decoration: underline;
+      opacity: .95;
+    }
+
+    /* tags/chips */
+    .chip-wrap{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .chip{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.12);
+      background: rgba(255,255,255,.06);
+      font-size: 13px;
+      line-height: 1;
+      opacity: .95;
+      white-space: nowrap;
+    }
+    .chip i{
+      font-size: 14px;
+      opacity: .9;
+    }
+
+    /* timeline mais limpa */
+    .timeline{ margin: 0; padding-left: 0; list-style: none; }
+    .timeline > li{ margin-bottom: 16px; }
+    .timeline-item{
+      border: 1px solid rgba(255,255,255,.10);
+      border-radius: 16px;
+      padding: 16px 16px;
+      background: rgba(255,255,255,.04);
+    }
+    .timeline-item .date{
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(75,156,219,.16);
+      border: 1px solid rgba(75,156,219,.20);
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .timeline-item .position{
+      display: block;
+      font-weight: 800;
+      font-size: 16px;
+      margin-bottom: 2px;
+    }
+    .timeline-item .des-pos{
+      display: block;
+      opacity: .75;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .timeline-item .wrap-text{
+      margin: 0;
+      opacity: .92;
+      line-height: 1.65;
+    }
+
+    /* listas de bullets melhores */
+    .cv-bullets{
+      margin: 0;
+      padding-left: 18px;
+    }
+    .cv-bullets li{ margin-bottom: 8px; }
+
+    /* título de seção com respiro */
+    .section-box h2{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      font-weight: 900;
+      letter-spacing: .2px;
+    }
+    .section-box h2 i{ opacity: .9; }
+
+    /* linha separadora */
+    .line-incontent{ opacity: .55; }
+  </style>
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="load-wrapp">
+    <div class="effect">
+      <p>João Vitor Santos</p>
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <div class="header mobile">
+    <div class="hamburger">
+      <span></span><span></span><span></span><span></span>
+    </div>
+    <h1>João Vitor Santos</h1>
+  </div>
+
+  <div class="all">
+
+    <!-- TOPBAR IGUAL INDEX -->
+    <div class="left-content">
+      <div class="left-scroll">
+
+        <div class="img-avata">
+          <img src="images/joao1.png" alt="Foto" />
+        </div>
+
+        <h3 class="title-port">
+          João Vitor Santos<br />
+          <small>Desenvolvedor C# • Analista de Dados</small>
+        </h3>
+
+        <div id="header">
+          <ul class="left-nav">
+            <li><a href="index.html"><i class="fa fa-home"></i><span>Home</span></a></li>
+            <li><a href="about.html"><i class="fa fa-user"></i><span>Sobre</span></a></li>
+            <li><a class="active" href="curriculo.html"><i class="fa fa-file-text"></i><span>Currículo</span></a></li>
+            <li><a href="portfolio.html"><i class="fa fa-briefcase"></i><span>Portfólio</span></a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- /TOPBAR -->
+
+    <!-- CONTEÚDO -->
+    <div class="right-content">
+      <div class="right-wrap right-page right-resume">
+
+        <div class="container-fruit">
+          <div class="row">
+
+            <!-- TÍTULO -->
+            <div class="col-12">
+              <div class="title-page">
+                <h1>Currículo</h1>
+                <p>Analista de Dados • BI • SQL • Automação • ETL • Power BI</p>
+              </div>
+            </div>
+
+            <!-- PERFIL -->
+            <div class="col-12">
+              <div class="section-box m-t-30">
+                <h2><i class="zmdi zmdi-hc-fw"></i> João Vitor Santos da Cunha</h2>
+
+                <div class="cv-grid">
+                  <!-- Resumo -->
+                  <div>
+                    <p style="margin:0; line-height:1.7; opacity:.92;">
+                      <strong>Analista de Dados</strong> com experiência em <strong>BI</strong>, <strong>automação</strong> e <strong>ETL</strong>,
+                      atuando na criação de <strong>dashboards</strong> e <strong>KPIs</strong> para suporte à tomada de decisão.
+                      Forte domínio de <strong>SQL</strong>, <strong>Power BI</strong> e <strong>Python (Pandas)</strong>, com vivência em integração
+                      de dados (<strong>MySQL</strong>), melhoria de qualidade e confiabilidade, além de otimização de consultas para performance.
+                    </p>
+
+                    <div class="chip-wrap">
+                      <span class="chip"><i class="fa fa-database"></i> SQL / MySQL</span>
+                      <span class="chip"><i class="fa fa-chart-line"></i> Power BI / KPIs</span>
+                      <span class="chip"><i class="fa fa-code"></i> Python (Pandas)</span>
+                      <span class="chip"><i class="fa fa-random"></i> ETL / Pipelines</span>
+                      <span class="chip"><i class="fa fa-lightbulb"></i> Insights de Negócio</span>
+                    </div>
+
+                    <p style="margin:14px 0 0 0;">
+                      🎓 <strong>Vou me formar este ano em Ciência de Dados.</strong>
+                    </p>
+                  </div>
+
+                  <!-- Contatos -->
+                  <div>
+                    <p class="cv-meta">
+                      📍 <strong>Barra Mansa - RJ</strong><br>
+                      📞 <strong>(24) 99954-0806</strong><br>
+                      ✉️ <strong><a href="mailto:joaovitor.bm28@gmail.com">joaovitor.bm28@gmail.com</a></strong><br><br>
+
+                      🔗 <strong><a href="https://www.linkedin.com/in/joaovitorsantos28" target="_blank" rel="noopener">
+                        linkedin.com/in/joaovitorsantos28
+                      </a></strong><br>
+
+                      💻 <strong><a href="https://github.com/JaoVSantos" target="_blank" rel="noopener">
+                        github.com/JaoVSantos
+                      </a></strong>
+                    </p>
+                  </div>
+                </div>
+
+                <div class="line-incontent m-t-30"></div>
+              </div>
+            </div>
+
+            <!-- HABILIDADES -->
+            <div class="col-12">
+              <div class="section-box m-t-30">
+                <h2><i class="zmdi zmdi-hc-fw"></i> Habilidades Técnicas</h2>
+
+                <div class="row m-t-20">
+                  <div class="col-md-6 col-sm-12">
+                    <div class="chip-wrap">
+                      <span class="chip"><i class="fa fa-chart-bar"></i> Power BI</span>
+                      <span class="chip"><i class="fa fa-chart-pie"></i> Qlik</span>
+                      <span class="chip"><i class="fa fa-chart-area"></i> QuickSight</span>
+                      <span class="chip"><i class="fa fa-file-excel"></i> Excel Avançado</span>
+                    </div>
+
+                    <div class="chip-wrap" style="margin-top:14px;">
+                      <span class="chip"><i class="fa fa-database"></i> SQL</span>
+                      <span class="chip"><i class="fa fa-database"></i> MySQL</span>
+                      <span class="chip"><i class="fa fa-layer-group"></i> Databricks (SQL)</span>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-sm-12">
+                    <div class="chip-wrap">
+                      <span class="chip"><i class="fa fa-code"></i> Python (Pandas)</span>
+                      <span class="chip"><i class="fa fa-project-diagram"></i> PySpark</span>
+                      <span class="chip"><i class="fa fa-random"></i> Pipelines ETL</span>
+                    </div>
+
+                    <div class="chip-wrap" style="margin-top:14px;">
+                      <span class="chip"><i class="fa fa-git-alt"></i> Git/GitHub</span>
+                      <span class="chip"><i class="fa fa-book"></i> Jupyter Notebook</span>
+                      <span class="chip"><i class="fa fa-tools"></i> Visual Studio</span>
+                      <span class="chip"><i class="fa fa-cubes"></i> C#/.NET (diferencial)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="line-incontent m-t-30"></div>
+              </div>
+            </div>
+
+            <!-- EXPERIÊNCIA -->
+            <div class="col-12">
+              <div class="section-box m-t-30">
+                <h2><i class="zmdi zmdi-hc-fw"></i> Experiência Profissional</h2>
+
+                <ul class="timeline m-t-30">
+
+                  <!-- CSN -->
+                  <li>
+                    <div class="timeline-item">
+                      <span class="date">Ago/2025 — Atual</span>
+                      <span class="position">Desenvolvedor de Software</span>
+                      <span class="des-pos">CSN</span>
+                      <ul class="cv-bullets">
+                        <li>Limpeza, tratamento e análise de dados com <strong>SQL</strong> e <strong>Power BI</strong>, gerando insights para gestão.</li>
+                        <li>Construção e manutenção de rotinas de dados para suportar <strong>indicadores</strong> e visões gerenciais.</li>
+                        <li>Automação de processos internos, elevando <strong>qualidade</strong> e <strong>disponibilidade</strong> de dados para decisão.</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <!-- Avalia -->
+                  <li>
+                    <div class="timeline-item">
+                      <span class="date">Abr/2023 — Ago/2024</span>
+                      <span class="position">Analista de Dados</span>
+                      <span class="des-pos">Avalia Sistemas</span>
+                      <ul class="cv-bullets">
+                        <li>Dashboards interativos em <strong>Power BI</strong> e <strong>Qlik</strong> para monitoramento de <strong>KPIs</strong>.</li>
+                        <li>Processos <strong>ETL</strong> integrando <strong>MySQL</strong> com foco em qualidade, confiabilidade e automação.</li>
+                        <li>Otimização e automação de consultas, melhorando <strong>performance</strong> e consistência das visualizações.</li>
+                        <li>Colaboração com áreas de negócio e time técnico para transformar dados em <strong>insights acionáveis</strong>.</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                  <!-- Exed -->
+                  <li>
+                    <div class="timeline-item">
+                      <span class="date">Ago/2022 — Abr/2023</span>
+                      <span class="position">Estagiário de Tecnologia</span>
+                      <span class="des-pos">Exed Consulting</span>
+                      <ul class="cv-bullets">
+                        <li>Participação em projetos de <strong>ETL</strong> e integração de dados, aumentando disponibilidade e qualidade.</li>
+                        <li>Desenvolvimento em <strong>SAP ABAP</strong> para relatórios e customizações (vivência com sistemas corporativos).</li>
+                        <li>Criação e manutenção de telas SAP com foco em usabilidade e desempenho.</li>
+                      </ul>
+                    </div>
+                  </li>
+
+                </ul>
+
+                <div class="line-incontent m-t-30"></div>
+              </div>
+            </div>
+
+            <!-- FORMAÇÃO -->
+            <div class="col-12">
+              <div class="section-box m-t-30">
+                <h2><i class="zmdi zmdi-hc-fw"></i> Formação & Certificações</h2>
+
+                <div class="row m-t-20">
+                  <div class="col-lg-6 col-md-12">
+                    <div class="wrap-text">
+                      <p style="margin-bottom:10px;"><strong>Graduação:</strong> Ciência da Computação — Cruzeiro do Sul (02/2022 – 12/2026) <em>(cursando)</em></p>
+                      <p style="margin-bottom:10px;"><strong>Formação Cientista de Dados:</strong> Comunidade DS (09/2024 – 02/2025)</p>
+                      <p style="margin:0;"><strong>Cloud Computing Re/Start:</strong> Escola da Nuvem (09/2024 – 12/2024)</p>
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-12">
+                    <div class="wrap-text">
+                      <p style="margin-bottom:10px;"><strong>Google Data Analytics</strong> (Certificado Profissional)</p>
+                      <p style="margin-bottom:10px;"><strong>Databricks & PySpark:</strong> Analisando Dados</p>
+                      <p style="margin:0;"><strong>Outros cursos:</strong> Power BI, Excel, Python e SQL para Análise de Dados</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="line-incontent m-t-30"></div>
+              </div>
+            </div>
+
+            <!-- DIFERENCIAIS -->
+            <div class="col-12">
+              <div class="section-box m-t-30">
+                <h2><i class="zmdi zmdi-hc-fw"></i> Softskills</h2>
+                <div class="chip-wrap" style="margin-top:14px;">
+                  <span class="chip"><i class="fa fa-users"></i> Trabalho em equipe</span>
+                  <span class="chip"><i class="fa fa-comments"></i> Comunicação</span>
+                  <span class="chip"><i class="fa fa-puzzle-piece"></i> Resolução de problemas</span>
+                  <span class="chip"><i class="fa fa-graduation-cap"></i> Aprendizado contínuo</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!-- /CONTEÚDO -->
+
+  </div>
+<script type="text/javascript" src="lib/owlcarousel/owl.carousel.js"></script>
+  <script type="text/javascript" src="lib/bootstrap/js/popper.min.js"></script>
+  <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="lib/magnific/jquery.magnific-popup.min.js"></script>
+  <script type="text/javascript" src="lib/portfolio/js/isotope.pkgd.min.js"></script>
+  <script type="text/javascript" src="js/app.js"></script>
+
+</body>
+</html>
