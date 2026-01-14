@@ -644,4 +644,97 @@ button:focus{ outline:0; box-shadow:none; }
   }
 }
 
+.project-media {
+  margin: 0;
+}
+
+.img-real {
+  width: auto;
+  height: auto;
+  max-width: 100%;  /* só reduz se exceder o card */
+  display: block;
+}
+
+/* FORÇA formato “estante” (um embaixo do outro) */
+.portfolio-grid{
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 18px !important;
+}
+
+
+.project-card{
+  border: 1px dashed rgba(255,255,255,.18);
+  border-radius: 16px;
+  padding: 16px;
+  background: rgba(255,255,255,.03);
+  display:flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Imagem maior e bem apresentada */
+.project-media{
+  margin: 0;
+  width: 100%;
+}
+
+.project-media img{
+  width: 100%;        /* ocupa toda a largura do card */
+  height: auto;       /* mantém proporção */
+  display: block;
+  border-radius: 12px;
+}
+
+/* Legenda opcional */
+.project-media figcaption{
+  margin-top: 8px;
+  font-size: 12px;
+  opacity: .75;
+}
+
+.project-media{
+  margin: 0;
+  overflow: auto;     /* scroll se exceder o card */
+}
+
+.project-media img{
+  width: auto;
+  height: auto;
+  max-width: none;    /* mantém tamanho real */
+  display: block;
+  border-radius: 12px;
+}
+/* Texto do card em padrão (mais legível) */
+.project-card h4{
+  font-size: 18px !important;
+  font-weight: 900 !important;
+  margin-bottom: 6px;
+}
+
+.project-card p{
+  font-size: 15px !important;   /* antes estava 13px */
+  line-height: 1.7 !important;
+  opacity: .95 !important;      /* antes .80 */
+  margin: 0 !important;
+}
+
+/* Destaque melhor nos negritos */
+.project-card p strong{
+  font-weight: 800;
+  opacity: 1;
+}
+
+/* Tag um pouco maior */
+.project-card .tag{
+  font-size: 13px !important;
+  padding: 7px 12px !important;
+}
+
+/* Legenda da imagem mais clara */
+.project-media figcaption{
+  font-size: 13px !important;
+  opacity: .85 !important;
+  margin-top: 8px;
+}
 
