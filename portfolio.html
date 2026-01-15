@@ -20,7 +20,7 @@
 
   <title>Portfólio - João Vitor Santos</title>
 
-  <!-- EXTRA (só para deixar a seleção bonita e organizada) -->
+  <!-- CSS APENAS do Portfolio + Embed (limpo e funcional) -->
   <style>
     .portfolio-wrap { padding-top: 8px; }
 
@@ -65,17 +65,12 @@
       padding: 22px;
     }
 
+    /* ESTANTE: um embaixo do outro */
     .portfolio-grid{
       margin-top: 16px;
       display: grid;
-      grid-template-columns: repeat(3, minmax(0,1fr));
-      gap: 14px;
-    }
-    @media (max-width: 992px){
-      .portfolio-grid{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-    }
-    @media (max-width: 576px){
-      .portfolio-grid{ grid-template-columns: 1fr; }
+      grid-template-columns: 1fr;
+      gap: 18px;
     }
 
     .project-card{
@@ -83,31 +78,33 @@
       border-radius: 16px;
       padding: 16px;
       background: rgba(255,255,255,.03);
-      min-height: 130px;
       display:flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 12px;
     }
+
     .project-card h4{
       margin: 0;
-      font-size: 15px;
+      font-size: 18px;
       font-weight: 900;
       letter-spacing: .2px;
     }
+
     .project-card p{
       margin: 0;
-      opacity: .80;
-      line-height: 1.5;
-      font-size: 13px;
+      opacity: .95;
+      line-height: 1.7;
+      font-size: 15px;
     }
+
     .tag{
       display:inline-flex;
       align-items:center;
       gap: 8px;
-      font-size: 12px;
+      font-size: 13px;
       font-weight: 800;
-      opacity: .9;
-      padding: 6px 10px;
+      opacity: .95;
+      padding: 7px 12px;
       border-radius: 999px;
       border: 1px solid rgba(255,255,255,.12);
       background: rgba(255,255,255,.06);
@@ -117,9 +114,32 @@
 
     .hint{
       margin-top: 10px;
-      opacity: .8;
-      font-size: 13px;
+      opacity: .85;
+      font-size: 14px;
       line-height: 1.6;
+    }
+
+    /* ✅ Power BI Embed (interativo e responsivo) */
+    .powerbi-embed{
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.10);
+      background: rgba(0,0,0,.20);
+    }
+
+    .powerbi-embed .ratio{
+      position: relative;
+      width: 100%;
+      padding-top: 50%; /* menor que 16:9 (56.25%), fica um pouco mais baixo */
+    }
+
+    .powerbi-embed iframe{
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
     }
   </style>
 </head>
@@ -143,7 +163,7 @@
 
   <div class="all">
 
-    <!-- TOPBAR IGUAL INDEX -->
+    <!-- TOPBAR -->
     <div class="left-content">
       <div class="left-scroll">
 
@@ -205,20 +225,21 @@
                   </p>
 
                   <div class="portfolio-grid">
+
+                    <!-- PROJETO 01 -->
                     <div class="project-card">
                       <h4>Eficiência na Distribuição de Cargas: Análise Operacional</h4>
 
-                      <!-- Campo de imagem do projeto -->
-                      <figure class="project-media">
-                        <!-- Troque o src pela imagem do seu dashboard -->
-                        <img
-                          src="images/projeto-distribuicao.png"
-                          alt="Dashboard Power BI — Distribuição de Cargas"
-                          loading="lazy"
-                        />
-                      </figure>
+                      <div class="powerbi-embed">
+                        <div class="ratio">
+                          <iframe
+                            title="Power BI - Distribuição de Cargas"
+                            src="https://app.powerbi.com/view?r=eyJrIjoiOTViZDEzN2EtYjE1Yi00MzNlLThjZWEtNTE2ZTRkODUzZjMxIiwidCI6ImIxZWQ1MDA1LThlMGQtNDc5ZS1iNzEwLTNiNTU0YTRjZDBjMCJ9"
+                            allowfullscreen="true">
+                          </iframe>
+                        </div>
+                      </div>
 
-                      <!-- Texto organizado em blocos -->
                       <p>
                         Projeto em <strong>Power BI</strong> para analisar a operação de distribuição de cargas,
                         com painel executivo e operacional para suportar decisões de <strong>capacidade</strong>,
@@ -226,69 +247,53 @@
                       </p>
 
                       <p>
-                        Entreguei KPIs com metas definidas: <strong>Ocupação de Veículos</strong>
-                        (peso transportado vs capacidade, meta <strong>≥ 65%</strong>) e <strong>CDI%</strong>
-                        (custo/receita de frete, meta <strong>≤ 16%</strong>), além de
-                        <strong>rankings</strong> de cidades (coletas/entregas) e de veículos com maior CDI%.
+                        KPIs com metas: <strong>Ocupação</strong> (meta <strong>≥ 65%</strong>) e <strong>CDI%</strong>
+                        (meta <strong>≤ 16%</strong>), além de rankings de cidades e veículos.
                       </p>
 
                       <p>
-                        Para acelerar diagnósticos, implementei análises de <strong>tendência temporal</strong> e
-                        visão de <strong>trade-off Ocupação x CDI</strong>, evidenciando rotas/veículos com
-                        subutilização e/ou custo elevado. Documentei as métricas (regras, fórmulas e critérios)
-                        e gerei insights acionáveis, como consolidação de cargas, ajuste de alocação de frota e
-                        priorização de rotas/cidades com maior impacto.
+                        Inclui análises de <strong>tendência</strong> e trade-off <strong>Ocupação x CDI</strong> para
+                        localizar subutilização e custos elevados.
                       </p>
 
                       <span class="tag"><i class="fa fa-tags"></i> Power BI • Excel • KPIs</span>
                     </div>
 
+                    <!-- PROJETO 02 -->
                     <div class="project-card">
-                      <h4>Painel Executivo de Vendas & Rentabilidade — Impacto do Desconto</h4>
+                      <h4>Painel Executivo de Vendas &amp; Rentabilidade — Impacto do Desconto</h4>
 
-                      <!-- Imagem do projeto -->
-                      <figure class="project-media">
-                        <img
-                          src="images/projeto-Rentabilidade.png"
-                          alt="Dashboard Power BI — Vendas e Rentabilidade"
-                          loading="lazy"
-                        />
-                        <figcaption>Power BI • KPIs + Tendência + Desconto x Margem</figcaption>
-                      </figure>
+                      <div class="powerbi-embed">
+                        <div class="ratio">
+                          <iframe
+                            title="Power BI - Vendas e Rentabilidade"
+                            src="https://app.powerbi.com/view?r=eyJrIjoiMzcxMzBkZGUtZmU0MS00MTc3LWE0MDctYjU2OGIxZTYwZTc2IiwidCI6ImIxZWQ1MDA1LThlMGQtNDc5ZS1iNzEwLTNiNTU0YTRjZDBjMCJ9"
+                            allowfullscreen="true">
+                          </iframe>
+                        </div>
+                      </div>
 
-                      <!-- Contexto (bem curto) -->
                       <p>
                         Dashboard em <strong>Power BI</strong> para avaliar performance comercial e
                         <strong>rentabilidade</strong>, destacando o impacto do <strong>desconto</strong> na
-                        <strong>margem</strong> e apoiando decisões de precificação e foco de mix.
+                        <strong>margem</strong>.
                       </p>
 
-                      <!-- Highlights (o que você fez) -->
                       <p><strong>O que eu fiz:</strong></p>
                       <ul class="about-list">
-                        <li><strong>Power Query (ETL):</strong> tratei dados sujos, converti <strong>Sales/Profit/Quantity</strong> (texto → número), corrigi erros e transformei <strong>DateKey (YYYYMMDD)</strong> em data.</li>
-                        <li><strong>DAX:</strong> criei medidas base <strong>Receita, Lucro, Quantidade e Margem %</strong> (com <code>DIVIDE</code>).</li>
+                        <li><strong>Power Query (ETL):</strong> tratamento de dados e conversões (texto → número) + DateKey para data.</li>
+                        <li><strong>DAX:</strong> medidas de Receita, Lucro, Quantidade e Margem % (com <code>DIVIDE</code>).</li>
                       </ul>
 
-                      <!-- Visuais (o que o painel entrega) -->
-                      <p><strong>Principais visuais e insights:</strong></p>
-                      <ul class="about-list">
-                        <li><strong>KPIs:</strong> leitura rápida do “estado” do negócio.</li>
-                        <li><strong>Tendência:</strong> Receita x Lucro ao longo do tempo para identificar queda de rentabilidade.</li>
-                        <li><strong>Dispersão:</strong> <strong>Discount x Margem</strong> (tamanho = Receita) para evidenciar onde desconto gera volume, mas derruba margem.</li>
-                        <li><strong>Cascata (Waterfall):</strong> Lucro por categoria/subcategoria para mostrar onde o lucro é ganho/perdido.</li>
-                      </ul>
-
-                      <!-- Benefício (resultado) -->
                       <p>
-                        <strong>Benefício:</strong> visão executiva clara para revisar <strong>política de desconto</strong>,
-                        priorizar categorias/subcategorias e equilibrar <strong>crescimento x margem</strong>.
+                        <strong>Benefício:</strong> suporte à decisão para ajustar política de descontos e priorizar mix com melhor margem.
                       </p>
 
-                      <span class="tag"><i class="fa fa-tags"></i> Power BI • Power Query • DAX • Visual Analytics</span>
+                      <span class="tag"><i class="fa fa-tags"></i> Power BI • Power Query • DAX</span>
                     </div>
 
-
+                  </div><!-- /portfolio-grid -->
+                </div><!-- /panelData -->
 
                 <!-- PAINEL: C# -->
                 <div id="panelCsharp" style="display:none;">
@@ -299,37 +304,24 @@
 
                   <div class="portfolio-grid">
                     <div class="project-card">
-                      <h4>Projeto 01 </h4>
-                      <p>Descrição rápida do projeto, arquitetura e resultados.</p>
+                      <h4>Projeto 01</h4>
+                      <p>Ainda não postado.</p>
                       <span class="tag"><i class="fa fa-tags"></i> TAGS</span>
                     </div>
 
-                    <div class="project-card">
-                      <h4>Projeto 02 </h4>
-                      <p>Descrição rápida do projeto + resultados.</p>
-                      <span class="tag"><i class="fa fa-tags"></i> TAGS </span>
-                    </div>
-
-                    <div class="project-card">
-                      <h4>Projeto 03 </h4>
-                      <p>Descrição rápida do projeto + resultados.</p>
-                      <span class="tag"><i class="fa fa-tags"></i> TAGS </span>
-                    </div>
                   </div>
-                </div>
+                </div><!-- /panelCsharp -->
 
-              </div>
-            </div>
+              </div><!-- /portfolio-panel -->
+            </div><!-- /col-12 -->
 
-          </div>
-        </div>
-
-
+          </div><!-- /row -->
+        </div><!-- /container -->
       </div>
     </div>
     <!-- /CONTEÚDO -->
 
-  </div>
+  </div><!-- /all -->
 
   <script>
     // Toggle simples (sem plugins)
@@ -352,7 +344,8 @@
       panelData.style.display = 'none';
     });
   </script>
-<script type="text/javascript" src="lib/owlcarousel/owl.carousel.js"></script>
+
+  <script type="text/javascript" src="lib/owlcarousel/owl.carousel.js"></script>
   <script type="text/javascript" src="lib/bootstrap/js/popper.min.js"></script>
   <script type="text/javascript" src="lib/bootstrap/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="js/app.js"></script>
